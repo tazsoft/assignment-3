@@ -4,5 +4,7 @@ require('dotenv').config();
 
 const client = new MongoClient(process.env.url);
 
-console.log("success");
+console.log("connection success");
+
+module.exports={client};
 
