@@ -1,17 +1,16 @@
 var {client} = require("./config.js");
 
 // console.log(client);
-const singleinsert = async()=> {
+const find=async()=>{
   try {
     const database = client.db("student");
     const user = database.collection("list");
 
-    const doc = {
-      name: "taz",
-      roll: "001"
-    }
-    const result = await user.insertOne(doc);
-    console.log(`A document was inserted with the _id: ${result.insertedId}`);
+    const query = {name: "jony"};
+
+    // const result = await user.findOne(query);
+    const result = await user.findOne(query);
+    console.log(result);
   }
   catch(error){
     console.log(error);
@@ -21,4 +20,4 @@ const singleinsert = async()=> {
   }
 };
 
-singleinsert();
+find();
