@@ -3,10 +3,8 @@ var client = require("./config.js");
 // console.log(client);
 const singleinsert = async()=> {
   try {
-    // const database = client.db("student");
-    // const user = database.collection("list");
-    var mydb=client.db("demo");
-    var mycollection=mydb.collection("list")
+    const database = client.db("student");
+    const user = database.collection("list");
 
     const doc = {
       name: "taz",
